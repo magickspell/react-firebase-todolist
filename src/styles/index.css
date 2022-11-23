@@ -1,5 +1,5 @@
 * {
-  font-family: cursive, monospace, sans-serif;
+  font-family: monospace, sans-serif;
 }
 body {
   min-width: 320px;
@@ -10,6 +10,12 @@ button {
   outline: none;
   border: 1px solid gray;
   transition: 0.3s;
+  /* get reed of selections via tap */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 button:hover {
   transform: scale(1.2);
@@ -46,6 +52,7 @@ button:hover {
   width: 300px;
   margin: 0 auto 20px;
   font-size: 14px;
+  font-family: sans-serif;
 }
 .wrapper_todos .wrapper_todos__pagination button {
   width: 80px;

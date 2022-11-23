@@ -3,7 +3,7 @@ import {Todo} from "../../components/Todo/Todo";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import {Context} from "../../index";
 import {getFirestore, collection} from "firebase/firestore";
-import {PopupTodo} from "../../components/PopupTodo/PopupTodo";
+import {PopupTodo} from "../../modules/PopupTodo/PopupTodo";
 import dayjs from "dayjs";
 
 /*
@@ -100,7 +100,6 @@ export const Todos = () => {
                     : []
             }
 
-
             {
                 loading
                     ? <p>Loading...</p>
@@ -120,7 +119,6 @@ export const Todos = () => {
                                 })
                                 : <p>...</p>
                         }
-
                     </div>
             }
 
