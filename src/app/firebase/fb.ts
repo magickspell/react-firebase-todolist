@@ -3,11 +3,11 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
-const DotEnv = require('dotenv')
-const parsedEnv = DotEnv.config().parsed
+const apiKey = process.env.REACT_APP_API_KEY
+console.log(apiKey)
 
 const fireConfig = {
-    apiKey: parsedEnv ? parsedEnv : 'somethingelse',
+    apiKey: apiKey ? apiKey : 'somethingelse',
     authDomain: "another-one-todolist-wow.firebaseapp.com",
     projectId: "another-one-todolist-wow",
     storageBucket: "another-one-todolist-wow.appspot.com",
