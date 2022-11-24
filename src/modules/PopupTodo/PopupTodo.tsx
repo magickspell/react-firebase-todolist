@@ -5,6 +5,24 @@ import {getStorage, ref, uploadBytesResumable, getDownloadURL} from "firebase/st
 import dayjs from "dayjs";
 import {generateUiid, propsPopupTodoI} from "./namespacePopupTodo";
 
+/** PopupTodo - This is module to operate with todos cards.
+ * @name PopupTodo
+ * @function
+ * @param props {propsPopupTodoI} - contains parameters below
+ * @param visible {boolean} - is popup visible or not
+ * @param setVisible {React.Dispatch<React.SetStateAction<boolean>>} - set up popup visability
+ * @param title {string} - popup title
+ * @param setTitle {React.Dispatch<React.SetStateAction<string>>} - set up popup title when we change input
+ * @param text {string} - popup text
+ * @param setText {React.Dispatch<React.SetStateAction<string>>} - set up popup text when we change input
+ * @param deadline {string} - popup deadline
+ * @param setDeadline {React.Dispatch<React.SetStateAction<string>>} - set up popup deadline when we change input
+ * @param status {string} - popup status
+ * @param setStatus {React.Dispatch<React.SetStateAction<string>>} - set up popup status when we change input
+ * @param file {string} - popup file
+ * @param uiid {string} - popup uiid
+ * */
+
 export const PopupTodo = (props: propsPopupTodoI) => {
 
     const {fireApp} = useContext(Context)

@@ -1,0 +1,33 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc",
+      "closure"
+    ]
+  },
+  "source": {
+    "include": [
+      "./src"
+    ],
+    "includePattern": ".(ts|tsx)$"
+  },
+  "typescript": {
+    "moduleRoot": "./src"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "better-docs/typescript"
+  ],
+  "opts": {
+    "destination": "docs",
+    "recurse": true,
+    "readme": "README.md"
+  },
+  "moduleFileExtensions": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx"
+  ]
+}

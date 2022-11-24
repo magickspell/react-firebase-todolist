@@ -1,12 +1,17 @@
 import 'firebase/firestore'
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
+
+/** fb.ts - there is going firebase initialization
+ * @name fireApp - instance of firebase application
+ * @instance
+ * @param apiKey - api key for firebase, coming from env
+ * @param fireConfig - config for instance
+ */
 
 const apiKey = process.env.REACT_APP_API_KEY
 
 const fireConfig = {
-    apiKey: apiKey ? apiKey : 'somethingelse',
+    apiKey: apiKey ? apiKey : 'somethingElse',
     authDomain: "another-one-todolist-wow.firebaseapp.com",
     projectId: "another-one-todolist-wow",
     storageBucket: "another-one-todolist-wow.appspot.com",
@@ -16,5 +21,3 @@ const fireConfig = {
 };
 
 export const fireApp = initializeApp(fireConfig)
-export const fireStore = getFirestore(fireApp);
-const analytics = getAnalytics(fireApp);

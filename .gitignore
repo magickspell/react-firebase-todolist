@@ -26,3 +26,4 @@ yarn-error.log*
 # hehe
 .env
 .env.local
+/docs

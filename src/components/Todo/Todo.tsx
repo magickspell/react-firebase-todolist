@@ -11,6 +11,18 @@ interface propsI {
     uiid: string
 }
 
+/** TODO - This is component for render todos cards
+ * @name Todo
+ * @function
+ * @param props {propsI} - contains parameters below
+ * @param title {string} - todos titles
+ * @param text {string} - todos texts
+ * @param deadline {string} - todos deadline, its string, but it will be parsed to dates via dayjs lib
+ * @param status {string} - todos statuses
+ * @param file {string} - todos files, its url to uploaded file. !!! as file i use images to display them in cards
+ * @param uiid {string} - todos uiid, generated unique id
+ * */
+
 export const Todo = (props: propsI) => {
     return (
         <div
